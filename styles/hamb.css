@@ -1,0 +1,77 @@
+/* hamburger */
+.checkbox {
+    display: none;
+  }
+  
+  .button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 3em;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+  }
+/* functionality */
+.checkbox:checked ~ .background {
+    transform: scale(80);
+  }
+  .checkbox:checked ~ .nav {
+    opacity: 1;
+    width: 100%;
+    right: 0;
+  }
+  
+  /*  */
+  /* styling hamb ICON */
+  .icon {
+    position: relative;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-100%, -100%); */
+  }
+  
+  .icon,
+  .icon::before,
+  .icon::after {
+    width: 3rem;
+    height: 1px;
+    background-color: #7b1fa2;
+    display: inline-block;
+  }
+  
+  .icon::before,
+  .icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+  
+  .icon::before {
+    top: min(-1.2vw, -2vh);
+  }
+  .icon::after {
+    top: max(1.2vw, 2vh);
+  }
+  
+  .button:hover icon:before {
+    top: -1rem;
+  }
+  .button:hover icon::after {
+    top: 1rem;
+  }
+  
+  .checkbox:checked + .button .icon {
+    background-color: transparent;
+  }
+  
+  .checkbox:checked + .button .icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  .checkbox:checked + .button .icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }

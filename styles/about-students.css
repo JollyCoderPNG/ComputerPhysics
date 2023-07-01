@@ -1,0 +1,129 @@
+@import url(base.css);
+
+.cover{
+    /* height: 100vh; */
+}
+.cover-img{
+    width: 100%;
+}
+
+.cover-img img{
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    text-transform: uppercase;
+    overflow-x: hidden;
+}
+
+.cover-info{
+    position: relative;
+    top: -13vw;
+    width: 100%;
+    display: flex;
+    justify-content:end;
+}
+
+.cover-info h1{
+    font-size: 3vw;
+    font-family: 'Girloy-Bold';
+    background-color: white;
+    width: fit-content;
+    padding: 0 3vw;
+}
+
+.info-block{
+    display: flex;
+    /* height: 100vh !important; */ 
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+.info-block{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+.info-block img{
+    display: block;
+    width: 100%;
+    border: none;
+}
+.info-block p{
+    width: 100%;
+    font-size: 3vw;
+    font-family: 'Girloy-Bold';
+    text-align: center;
+}
+
+.p-first-info, .p-second-info{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.info-block span{
+    color: #7b1fa2;
+}
+
+body .info-block:last-child p{
+    color: #FCC600;
+}
+
+body .info-block:nth-child(2) p{
+    color: #3BB7B5;
+}
+
+body .info-block:nth-child(3) p{
+    color: #0060A9;
+}
+
+
+body .info-block:nth-child(2n+1){
+    animation: 2s ease-in-out fromRight;
+}
+
+body .info-block:nth-child(2n+2){
+    animation: 2.5s ease-in-out fromLeft;
+}
+
+@media  (orientation: portrait) and (max-width: 767px) {
+    .info-block p{
+        font-size: 5vh;
+    }
+}
+
+
+
+/* @keyframes getDown{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-100vh);
+    }
+} */
+
+@keyframes fromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100vw);
+      }
+      100% {
+        opacity: 1;
+      }
+}
+
+@keyframes fromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+      }
+      100% {
+        opacity: 1;
+      }
+}

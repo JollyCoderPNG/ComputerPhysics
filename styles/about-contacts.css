@@ -1,0 +1,116 @@
+@import url(base.css);
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    overflow-x:hidden;
+    font-family: 'Girloy-Bold';
+}
+
+.cover{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7b1fa2;
+    color: white;
+    font-family: "Girloy-Bold";
+    font-size: 2vw;
+    text-align: center;
+    width: 90%;
+    padding: 5%;
+}
+
+.cover h2{
+    width: 70%;
+}
+
+.cover img{
+    width: 25%;
+}
+
+.contacts-fkne, .contacts-fiz{
+    margin-top: 10vw;
+}
+
+.contacts-fkne, .contacts-fiz{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fkne-people{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    text-align: center;
+}
+
+.fkne-people p.job{
+    margin: 0;
+}
+
+.fkne-people p{
+    font-size: 1.5vw;
+}
+
+.job{
+    font-family: 'Gilroy-Regular';
+}
+
+.fkne-info {
+    color: gray;
+}
+
+.contacts-fkne .fkne-info{
+    width: 30%;
+    font-size: 2vw;
+}
+
+.contacts-fiz .fkne-info{
+    font-size: 3vw;
+    min-width: 30%;
+    max-width: 50%;
+}
+
+.name>a{
+    color: inherit;
+}
+
+.name>a:hover{
+    color: #7b1fa2;
+}
+
+span{
+    text-decoration: underline;
+}
+
+@media  (orientation: portrait) and (max-width: 767px) {
+    .cover{
+        font-size: 2vh;
+    }
+    .contacts-fkne, .contacts-fiz{
+        flex-wrap: wrap;
+    }
+    .fkne-people{
+        width:40%;
+    }
+    .fkne-people p{
+        font-size: 1.5vh !important;
+    }
+    p.name{
+        margin-bottom: 0;
+    }
+    .fkne-info{
+        width: 90% !important;
+        font-size: 1.8vh !important;
+    }
+    .contacts-fiz{
+        align-items: start;
+    }
+    .job{
+        padding-top: 2vw;
+    }
+}

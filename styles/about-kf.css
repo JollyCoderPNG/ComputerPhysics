@@ -1,0 +1,154 @@
+@import url(base.css);
+
+.cover{
+    /* height: 100vh; */
+}
+.cover-img{
+    width: 100%;
+}
+
+.cover-img img{
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    text-transform: uppercase;
+    overflow-x: hidden;
+}
+
+.cover-info{
+    position: relative;
+    top: -13vw;
+    width: 100%;
+    display: flex;
+    justify-content:end;
+}
+
+.cover-info h1{
+    font-size: 3vw;
+    font-family: 'Girloy-Bold';
+    background-color: white;
+    width: fit-content;
+    padding: 0 3vw;
+}
+
+.info-block{
+    display: flex;
+    /* height: 100vh !important; */ 
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.info-block{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+.info-block img{
+    display: block;
+    width: 50%;
+    border: none;
+}
+.info-block p{
+    width: 44%;
+    font-size: 1.9vw;
+    font-family: 'Girloy-Bold';
+    text-align: justify;
+}
+
+.p-first-info{
+    padding-left: 5%;
+    padding-right: 1%;
+}
+
+.p-second-info{
+    padding-right: 5%;
+    padding-left: 1%;
+}
+
+.info-block span{
+    color: #7b1fa2;
+}
+
+/* body{
+    overflow: hidden;
+} */
+
+body .info-block:nth-child(2n+1){
+    animation: 2s ease-in-out fromRight;
+}
+
+body .info-block:nth-child(2n+2){
+    animation: 2.5s ease-in-out fromLeft;
+}
+
+.about-olimp{
+    text-align: right;
+    padding-right: 1%;
+    font-family: 'Girloy-Bold';
+}
+
+.about-olimp a{
+    font-size: max(3vw, 2vh);
+    color: gray;
+}
+
+.about-olimp a:hover{
+    color: #7b1fa2;
+}
+
+@media  (orientation: portrait) and (max-width: 767px) {
+    .info-block{
+        flex-direction: column;
+    }
+    body .info-block:nth-child(odd){
+        flex-direction: column-reverse;
+    }
+    .info-block{
+        height: fit-content;
+    }
+    .info-block p{
+        padding: 0;
+    }
+    .info-block img, .info-block p{
+        width: 90%;
+    }
+    p{
+        font-size: 2.5vh !important;
+        /* font-family: 'Gilroy-Regular' !important; */
+    }
+}
+
+
+/* @keyframes getDown{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-100vh);
+    }
+} */
+
+@keyframes fromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100vw);
+      }
+      100% {
+        opacity: 1;
+      }
+}
+
+@keyframes fromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+      }
+      100% {
+        opacity: 1;
+      }
+}

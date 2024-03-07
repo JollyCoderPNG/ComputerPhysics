@@ -1,8 +1,5 @@
 @import url(base.css);
 
-.cover{
-    /* height: 100vh; */
-}
 .cover-img{
     width: 100%;
 }
@@ -35,7 +32,6 @@ body{
 
 .info-block{
     display: flex;
-    /* height: 100vh !important; */ 
     align-items: center;
     justify-content:center;
     flex-direction: row;
@@ -95,18 +91,6 @@ body .info-block:nth-child(2n+2){
         font-size: 5vh;
     }
 }
-
-
-
-/* @keyframes getDown{
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(-100vh);
-    }
-} */
 
 @keyframes fromRight {
     0% {
